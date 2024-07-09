@@ -1,0 +1,113 @@
+.widthNavBarOpen {
+    width: 300px;
+    /* flex-basis: 300px; */
+    
+}
+
+.widthNavBarClose {
+    width: 80px;
+    /* transition: flex-basis .5s ease-in-out, width .5s ease-in-out; */
+}
+
+.displayNone {
+    display: none;
+}
+
+.fontWhite {
+    color: white;
+}
+
+.fontGray {
+    color: rgb(201, 201, 201);
+}
+
+/*Corregir eso de que el div del imgUser y el Usuario se VE ANTES -> Con el SETTIMEOUT se puede hacer creo */
+.navBar {
+    transition: width .3s ease-in-out; 
+    padding: 20px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #424C6F;
+}
+
+.topSection {
+    /* border: 1px solid orange; */
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    transition: height .5s ease-in-out;
+}
+
+.topSectionClose {
+    justify-content: center;
+    height: 32px;
+    transition: height .5s ease-in-out;
+}
+
+.boxLogo {
+    display: flex;
+    /* border: 1px solid brown; */
+    align-items: center;
+    gap: 25px
+}
+
+.boxImgUser {
+    width: 60px;
+}
+
+.imgUser {
+    width: 100%;
+}
+
+.boxIcon3Lines {
+    /* border: 1px solid blue; */
+    display: flex;
+    align-items: center;
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+.boxIcon3LinesClose {
+    margin: 0;
+}
+
+.icon3Lines {
+    font-size: 1.7rem;
+    /* color: white; */
+}
+
+.listItems {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+
+.link {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+/* Cuando el NavBar esté cerrado también tendrá a ".link", pero se le agregará a ".linkClose" */
+.linkClose {
+    /* display: flex-block;  */
+    justify-content: center;
+}
+
+.active {
+    filter: drop-shadow(0 0 10px rgba(250, 250, 250, .7));
+}
+
+.iconItem {
+    font-size: 1.7rem;
+    color: white;
+}

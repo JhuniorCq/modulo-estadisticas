@@ -1,0 +1,25 @@
+.boxParagraph {
+    /* text-align: center; */
+    height: 70px;
+    align-content: center;
+    text-align: center;
+}
+
+.boxCourses {
+    border: 1px solid green;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    /* padding: 40px 0; */
+}
+
+.textColorChoose {
+    color: #424C6F;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+
+
+

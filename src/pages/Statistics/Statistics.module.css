@@ -1,0 +1,32 @@
+/* Al colocar esto acá POR FIN logro que el ancho del SEGUNDO DIV, sea el ANCHO RESTANTE, para que así el DIV del NAVBAR y este, SUMEN 100% */
+.boxStatistics {
+    flex-grow: 1;
+    background-color: #BED4FF;
+}
+
+.boxTitle {
+    /* border: 1px solid blue; */
+    text-align: center;
+    background-color: #044D76;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    color: white;
+}
+
+
+/* Los estilos para cada CURSO están en <Course /> */
+
+
+
+
+
+/* Los estilos para cada INDICADOR están en <Indicator /> */
+
+.indicator:hover {
+    scale: 1.1;
+}
