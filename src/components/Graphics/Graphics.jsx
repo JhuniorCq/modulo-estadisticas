@@ -6,6 +6,7 @@ import { LineGraph } from "./LineGraph/LineGraph";
 
 export const Graphics = ({ dataIndicator, necessaryInformation }) => {
     const { id } = dataIndicator;
+    // const {responseGet, loadingGet, errorGet} = useGet("")
     switch(id) {
         case 1: {
             return (
@@ -22,8 +23,8 @@ export const Graphics = ({ dataIndicator, necessaryInformation }) => {
                     data: dataY,
                     fill: true,
                     borderColor: "#044D76",
-                    // backgroundColor0: "rgba(190, 212, 255, .4)",
-                    pointBackgroundColor: "#424C6F"
+                    backgroundColor: "rgba(255, 0, 0, .4)",
+                    // pointBackgroundColor: "rgb(255,0,0)"
                 },
                 options: {
                     responsive: true,
