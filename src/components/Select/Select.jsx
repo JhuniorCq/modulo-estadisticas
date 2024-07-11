@@ -1,33 +1,38 @@
 import styles from "./Select.module.css";
 
+const FILTER_TYPES = {
+    students: "students",
+    evaluations: "evaluations"
+}
+
 const assignTagAndFilter = (idIndicator) => {
     switch(idIndicator) {
         case 1: {
 
             return {
-                label: "Filtrado por estudiante: ",
-                filterType: "students"
+                label: "Filtro por estudiante: ",
+                filterType: FILTER_TYPES.students
             };
         }
         case 3: {
 
             return {
-                label: "Filtrado 3: ",
-                filterType: "evaluations"
+                label: "Filtro por evaluación: ",
+                filterType: FILTER_TYPES.evaluations
             };
         }
         case 4: {
 
             return {
-                label: "Filtrado 4: ",
-                filterType: "evaluations"
+                label: "Filtro por evaluación: ",
+                filterType: FILTER_TYPES.evaluations
             };
         }
         case 5: {
 
             return {
                 label: "Filtrado 5: ",
-                filterType: "evaluations"
+                filterType: FILTER_TYPES.evaluations
             };
         }
     }
@@ -35,7 +40,7 @@ const assignTagAndFilter = (idIndicator) => {
 
 const getInformation = (filterType) => {
     switch(filterType) {
-        case "students": {
+        case FILTER_TYPES.students: {
             const dataOptions = [
                 {
                     id: 1,
@@ -56,7 +61,7 @@ const getInformation = (filterType) => {
             ]
             return dataOptions;
         }
-        case "evaluations": {
+        case FILTER_TYPES.evaluations: {
             const dataOptions = [
                 {
                     id: 1,
@@ -92,7 +97,6 @@ export const Select = ({ idIndicator }) => {
     // En base al ID INDICATOR voy a asignarle un LABEL y un FILTER TYPE
     const { label, filterType } = assignTagAndFilter(idIndicator);
     const dataOptions = getInformation(filterType);
-
     
     return (
         <>

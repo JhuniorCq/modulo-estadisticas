@@ -6,18 +6,70 @@ import { LineGraph } from "./LineGraph/LineGraph";
 export const Graphics = ({ dataIndicator, necessaryInformation }) => {
     const { id } = dataIndicator;
     switch(id) {
-        case 1:
+        case 1: {
             return (
                 <LineGraph />
             )
-        case 2:
+        }
+        case 2: {
+            const dataX = ["Prácticas", "Ex. Parcial", "Participación", "Ex. Final", "Proyecto"];
+            const dataY = [15, 12, 9, 16, 15];
+            
+            const graphConfiguration = {
+                graphicData: {
+                    label: "Mis notas",
+                    data: dataY,
+                    fill: true,
+                    borderColor: "#044D76",
+                    // backgroundColor0: "rgba(190, 212, 255, .4)",
+                    pointBackgroundColor: "#424C6F"
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            min: 0,
+                            max: 20
+                        }
+                    }
+                }
+            }
+
             return (
-                <BarGraph />
+                <BarGraph graphConfiguration={graphConfiguration} dataX={dataX} dataY={dataY} />
             )
-        case 3:
+        }
+        case 3: {
+            const dataX = ["Carlos", "Manuel", "María", "José", "Noemi"];
+            const dataY = [11, 17, 18, 7, 14];
+            
+            const graphConfiguration = {
+                graphicData: {
+                    label: "Notas por Evaluación",
+                    data: dataY,
+                    fill: true,
+                    borderColor: "#044D76",
+                    // backgroundColor0: "rgba(190, 212, 255, .4)",
+                    pointBackgroundColor: "#424C6F"
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            min: 0,
+                            max: 20
+                        }
+                    }
+                }
+            }
+
+            return (
+                <BarGraph graphConfiguration={graphConfiguration} dataX={dataX} dataY={dataY} />
+            )
+        }
+        case 4: {
             return <div>MOSTRANDO GRÁFICO N° {id}</div>
-        case 4:
-            return <div>MOSTRANDO GRÁFICO N° {id}</div>
+        }
         default:
             return <div>GRÁFICO INEXISTENTE</div>
     }

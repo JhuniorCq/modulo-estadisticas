@@ -1,0 +1,22 @@
+.boxCourseGraphics {
+    width: 100%;
+    border: 1px solid orange;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.courseName {
+    width: 100%;
+    text-align: center;
+}
+
+.boxGraphics {
+    width: 100%;
+    border: 1px solid red;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}

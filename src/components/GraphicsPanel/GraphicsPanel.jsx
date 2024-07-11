@@ -10,11 +10,11 @@ export const GraphicsPanel = ({ dataIndicator, dataCourse }) => {
         <h2>{dataIndicator.name}</h2>
       </div>
 
-      <div>
+      {/* <div>
         <p>
           Curso: <span className={styles.nameCourse}>{dataCourse.name}</span>
         </p>
-      </div>
+      </div> */}
 
       {dataIndicator.id !== 2 ? (
         <div>

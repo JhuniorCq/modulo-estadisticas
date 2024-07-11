@@ -40,10 +40,11 @@ const options = {
 export const LineGraph = () => {
 
     const data = useMemo(() => {
+        // graphConfiguration
         return {
             datasets: [
                 {
-                    label: "Mis notas",
+                    label: "Notas por Estudiantes",
                     data: scores,
                     fill: true,
                     borderColor: "#044D76",
