@@ -1,6 +1,8 @@
 import { FaBookBookmark } from "react-icons/fa6";
 import { CoursesContext } from "./CoursesContext";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { useGet } from "../../hooks/useGet";
 
 export const CoursesProvider = ({ children }) => {
   const [courseList, setCourseList] = useState([
@@ -28,7 +30,12 @@ export const CoursesProvider = ({ children }) => {
       schedule: "1:00 pm - 6:00 pm",
       icon: <FaBookBookmark /> || "Icono",
     },
+
   ]);
+
+  // const {responseGet, loadingGet, errorGet} = useGet("")
+
+
 
   return (
     <CoursesContext.Provider value={{ courseList }}>
