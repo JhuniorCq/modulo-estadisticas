@@ -1,5 +1,6 @@
 import { Select } from "../Select/Select";
 import { BarGraph } from "./BarGraph/BarGraph";
+import { CircularGraphic } from "./CircularGraphic/CircularGraphic";
 import styles from "./Graphics.module.css";
 import { LineGraph } from "./LineGraph/LineGraph";
 
@@ -68,7 +69,33 @@ export const Graphics = ({ dataIndicator, necessaryInformation }) => {
             )
         }
         case 4: {
-            return <div>MOSTRANDO GRÁFICO N° {id}</div>
+            const options = {
+                responsive: true,
+                maintainAspectRatio: false
+            };
+            
+            const data = {
+                labels: ["Aprobados: 79%", "Desaprobados: 21%"],
+                datasets: [
+                    {
+                        label: "Popularidad en Navidad",
+                        data: [79, 21],
+                        backgroundColor: [
+                            "rgba(54, 162, 235, 0.2)",
+                            "rgba(255, 99, 132, 0.2)",
+                        ],
+                        borderColor: [
+                            "rgba(54, 162, 235, 1)",
+                            "rgba(255, 99, 132, 1)",
+                        ],
+                        borderWidth: 1
+                    }
+                ]
+            }
+
+            return (
+                <CircularGraphic options={options} data={data} />
+            )
         }
         default:
             return <div>GRÁFICO INEXISTENTE</div>
