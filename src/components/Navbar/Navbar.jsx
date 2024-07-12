@@ -3,7 +3,7 @@ import styles from "./Navbar.module.css";
 import { IoReorderThreeOutline } from "react-icons/io5";
 import { IoHomeSharp } from "react-icons/io5";
 import { IoBarChart } from "react-icons/io5";
-import { useContext, useEffect, useRef, useState } from "react";
+import { useContext, useState } from "react";
 import imgUser from "../../assets/images/user.png";
 import { CoursesContext } from "../../context/CoursesContext/CoursesContext";
 
@@ -19,7 +19,7 @@ export const Navbar = () => {
             <img className={styles.imgUser} src={imgUser} alt="" />
           </div>
           <div>
-            <h3 className={styles.fontWhite}>Jhunior</h3>
+            <h3 className={styles.fontWhite}>Alvaro</h3>
             <p className={styles.fontGray}>Administrador</p>
           </div>
         </div>

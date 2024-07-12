@@ -41,7 +41,7 @@ export const BarGraph = ({ graphConfiguration, dataX, dataY }) => {
         <>
             <Bar data={data} options={options} />
             <div>
-                <p>Alumno con mejor nota: ...</p>
+                <p>Alumno con mejor nota: Fernández Ruíz</p>
             </div>
         </>
     );
