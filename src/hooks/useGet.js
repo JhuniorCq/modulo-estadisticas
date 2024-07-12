@@ -10,7 +10,7 @@ export const useGet = (url) => {
 
     const getData = async () => {
         try {
-            const {data} = await axios.get("")
+            const {data} = await axios.get(url)
             setStateGet({
                 responseGet : data,
                 loadingGet: false,

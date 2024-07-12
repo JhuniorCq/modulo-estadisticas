@@ -1,12 +1,9 @@
 .widthNavBarOpen {
     width: 300px;
-    /* flex-basis: 300px; */
-    
 }
 
 .widthNavBarClose {
     width: 80px;
-    /* transition: flex-basis .5s ease-in-out, width .5s ease-in-out; */
 }
 
 .displayNone {
@@ -21,7 +18,6 @@
     color: rgb(201, 201, 201);
 }
 
-/*Corregir eso de que el div del imgUser y el Usuario se VE ANTES -> Con el SETTIMEOUT se puede hacer creo */
 .navBar {
     transition: width .3s ease-in-out; 
     padding: 20px 25px;
@@ -32,7 +28,6 @@
 }
 
 .topSection {
-    /* border: 1px solid orange; */
     display: flex;
     justify-content: space-between;
     height: 60px;
@@ -47,7 +42,6 @@
 
 .boxLogo {
     display: flex;
-    /* border: 1px solid brown; */
     align-items: center;
     gap: 25px
 }
@@ -61,7 +55,6 @@
 }
 
 .boxIcon3Lines {
-    /* border: 1px solid blue; */
     display: flex;
     align-items: center;
     margin: 0 15px;
@@ -74,7 +67,6 @@
 
 .icon3Lines {
     font-size: 1.7rem;
-    /* color: white; */
 }
 
 .listItems {
@@ -90,16 +82,14 @@ a {
     text-decoration: none;
 }
 
-
 .link {
     width: 100%;
     display: flex;
     align-items: center;
     gap: 20px;
 }
-/* Cuando el NavBar esté cerrado también tendrá a ".link", pero se le agregará a ".linkClose" */
+
 .linkClose {
-    /* display: flex-block;  */
     justify-content: center;
 }
 

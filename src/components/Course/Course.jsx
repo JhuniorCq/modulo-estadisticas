@@ -1,6 +1,5 @@
 import styles from "./Course.module.css"
 import locoCurso from "../../assets/images/logo-curso.png";
-// Por ahora IMPORTARÉ EL LOGO DEL CURSO ACÁ -> ESTE LOGO SERÁ EL MISMO PARA TODOS LOS CURSOS
 
 export const Course = ({ id, name, period, schedule, showIndicators }) => {
   return (

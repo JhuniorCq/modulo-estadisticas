@@ -8,12 +8,11 @@ export const CoursesPanel = ({ showIndicators }) => {
   const { courseList } = useContext(CoursesContext);
 
   return (
-    <div>
+    <div className={styles.boxCoursesPanel}>
       <div className={styles.boxParagraph}>
         <p className={styles.textColorChoose}>Escoge un curso:</p>
       </div>
 
-      {/* Cada CURSO tendrá un ONCLICK que ejecutará una FUNCIÓN -> a esa misma la crearé acá en Statistics */}
       <div className={styles.boxCourses}>
         {courseList &&
           courseList.map((course) => (

@@ -1,6 +1,5 @@
 import { Route, Routes } from "react-router-dom";
 import { Statistics } from "../pages/Statistics/Statistics";
-import { IndicatorPanel } from "../components/IndicatorPanel/IndicatorPanel";
 import { CourseGraphics } from "../pages/CourseGraphics/CourseGraphics";
 
 export const MyRoutes = () => {

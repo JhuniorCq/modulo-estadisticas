@@ -8,15 +8,8 @@ import imgUser from "../../assets/images/user.png";
 import { CoursesContext } from "../../context/CoursesContext/CoursesContext";
 
 export const Navbar = () => {
-
   const [isOpen, setIsOpen] = useState(false);
   const { courseList } = useContext(CoursesContext);
-
-  useEffect(() => {
-    const navBar = document.querySelector(`.${styles.navBar}`);
-    console.log(navBar)
-    
-  }, [isOpen]);
 
   return (
     <nav className={isOpen ? `${styles.navBar} ${styles.widthNavBarOpen}`: `: ${styles.navBar} ${styles.widthNavBarClose}`}>
@@ -25,7 +18,7 @@ export const Navbar = () => {
           <div className={styles.boxImgUser}>
             <img className={styles.imgUser} src={imgUser} alt="" />
           </div>
-          <div> {/*Acá también debo agregar el DISPLAY NONE */}
+          <div>
             <h3 className={styles.fontWhite}>Jhunior</h3>
             <p className={styles.fontGray}>Administrador</p>
           </div>

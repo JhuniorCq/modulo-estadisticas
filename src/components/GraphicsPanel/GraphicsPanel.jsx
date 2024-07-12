@@ -1,8 +1,10 @@
 import styles from "./GraphicsPanel.module.css";
 import { Graphics } from "../Graphics/Graphics";
 import { Select } from "../Select/Select";
+import { useGet } from "../../hooks/useGet";
 
 export const GraphicsPanel = ({ dataIndicator, dataCourse }) => {
+  const {responseGet: studentData, loadingGet, errorGet} = useGet("https://springbootreact-7w44.onrender.com/api/v1/alumnos");
 
   return (
     <div className={styles.boxGraphicPanel}>
@@ -11,12 +13,12 @@ export const GraphicsPanel = ({ dataIndicator, dataCourse }) => {
 
       {dataIndicator.id !== 2 ? (
         <div>
-          <Select idIndicator={dataIndicator.id} />
+          <Select studentData={studentData} idIndicator={dataIndicator.id} />
         </div>
       ) : null}
 
       <div className={styles.boxGraphic}>
-        <Graphics dataIndicator={dataIndicator} necessaryInformation={null} />
+        <Graphics studentData={studentData} dataIndicator={dataIndicator} necessaryInformation={null} />
       </div>
     </div>
   );

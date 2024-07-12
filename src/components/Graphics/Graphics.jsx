@@ -1,16 +1,38 @@
-import { Select } from "../Select/Select";
+
 import { BarGraph } from "./BarGraph/BarGraph";
 import { CircularGraphic } from "./CircularGraphic/CircularGraphic";
 import styles from "./Graphics.module.css";
 import { LineGraph } from "./LineGraph/LineGraph";
 
-export const Graphics = ({ dataIndicator, necessaryInformation }) => {
+export const Graphics = ({ studentData, dataIndicator }) => {
     const { id } = dataIndicator;
-    // const {responseGet, loadingGet, errorGet} = useGet("")
+    const studentSurames = studentData.map(student => student.apellidos);
+
     switch(id) {
         case 1: {
+            const dataX = ["Prácticas", "Ex. Parcial", "Participación", "Ex. Final", "Proyecto"]; // X
+            const dataY = [15, 12, 9, 16, 15]; // Y
+            const graphConfiguration = {
+                graphicData: {
+                    label: "Notas por Estudiantes",
+                    data: dataY,
+                    fill: true,
+                    borderColor: "#044D76",
+                    pointBackgroundColor: "#424C6F"
+                }, 
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            min: 0,
+                            max: 20
+                        }
+                    }
+                }
+            }
+
             return (
-                <LineGraph />
+                <LineGraph graphConfiguration={graphConfiguration} dataX={dataX} dataY={dataY} />
             )
         }
         case 2: {
@@ -23,8 +45,7 @@ export const Graphics = ({ dataIndicator, necessaryInformation }) => {
                     data: dataY,
                     fill: true,
                     borderColor: "#044D76",
-                    backgroundColor: "rgba(255, 0, 0, .4)",
-                    // pointBackgroundColor: "rgb(255,0,0)"
+                    backgroundColor: "rgba(255, 0, 0, .4)"
                 },
                 options: {
                     responsive: true,
@@ -42,8 +63,8 @@ export const Graphics = ({ dataIndicator, necessaryInformation }) => {
             )
         }
         case 3: {
-            const dataX = ["Carlos", "Manuel", "María", "José", "Noemi"];
-            const dataY = [11, 17, 18, 7, 14];
+            const dataX = studentSurames;
+            const dataY = [11, 17, 18, 7, 14, 11, 1];
             
             const graphConfiguration = {
                 graphicData: {
@@ -51,8 +72,7 @@ export const Graphics = ({ dataIndicator, necessaryInformation }) => {
                     data: dataY,
                     fill: true,
                     borderColor: "#044D76",
-                    // backgroundColor0: "rgba(190, 212, 255, .4)",
-                    pointBackgroundColor: "#424C6F"
+                    backgroundColor: "rgba(255, 255, 0, .4)",
                 },
                 options: {
                     responsive: true,
